@@ -4,7 +4,6 @@ result = 0
 count = 2 ** (N - 1)
 
 while count < (2 ** N):
-    print(bin(count))
     if '0b11' in bin(count):
         break
     elif '11' in bin(count):
