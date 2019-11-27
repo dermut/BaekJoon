@@ -1,9 +1,11 @@
+import sys
+
 N = int(input())
 
 numbers = []
 
 for i in range(N):
-    numbers.append(int(input()))
+    numbers.append(sys.stdin.readline().rstrip())
 
 numbers.sort()
 
