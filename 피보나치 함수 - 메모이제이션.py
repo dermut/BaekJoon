@@ -1,4 +1,6 @@
 cache = [0] * 100
+cache[0] = 0
+cache[1] = 1
 
 def fibonacci(n):
     if n == 0:
@@ -20,8 +22,11 @@ for i in range(T):
     N = int(input())
 
     fibonacci(N)
-
-    result.append([cache[N-1], cache[N]])
+    
+    if N == 0:
+        result.append([1, 0])
+    else:
+        result.append([cache[N-1], cache[N]])
 
 for i in result:
     print(i[0], i[1])
